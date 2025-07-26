@@ -1,0 +1,28 @@
+{
+  "name": "Angular Docker App",
+
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+
+  "service": "angular-dev",
+
+  "workspaceFolder": "/app",
+
+  "remoteUser": "node",
+
+  "forwardPorts": [4200],
+
+  "postCreateCommand": "npm install",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "angular.ng-template",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-vscode-remote.remote-containers" 
+      ]
+    }
+  }
+}
