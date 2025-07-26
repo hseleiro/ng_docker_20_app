@@ -3,6 +3,8 @@ FROM node:20-alpine
 ARG UID=1000
 ARG GID=1000
 
+RUN apk update && apk add --no-cache git bash openssh-client && rm -rf /var/cache/apk/*
+
 RUN \
   if ! getent group ${GID} > /dev/null; then \
     addgroup -g ${GID} appgroup; \
